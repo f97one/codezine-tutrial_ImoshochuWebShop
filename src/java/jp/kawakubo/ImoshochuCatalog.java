@@ -39,7 +39,7 @@ public class ImoshochuCatalog extends HttpServlet {
 	    out.println("<title>Servlet ImoshochuCatalog</title>");	    
 	    out.println("</head>");
 	    out.println("<body>");
-	    out.println("<h1>Servlet ImoshochuCatalog at " + request.getContextPath() + "</h1>");
+	    out.println("<h1>" + "HTMLからServletの呼び出し成功!" + "</h1>");
 	    out.println("</body>");
 	    out.println("</html>");
 	} finally {	    
