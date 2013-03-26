@@ -6,6 +6,7 @@ package jp.kawakubo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,22 +30,16 @@ public class ImoshochuCatalog extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 	    throws ServletException, IOException {
-	response.setContentType("text/html;charset=UTF-8");
-	PrintWriter out = response.getWriter();
-	try {
-	    /* TODO output your page here. You may use following sample code. */
-	    out.println("<!DOCTYPE html>");
-	    out.println("<html>");
-	    out.println("<head>");
-	    out.println("<title>Servlet ImoshochuCatalog</title>");	    
-	    out.println("</head>");
-	    out.println("<body>");
-	    out.println("<h1>" + "HTMLからServletの呼び出し成功!" + "</h1>");
-	    out.println("</body>");
-	    out.println("</html>");
-	} finally {	    
-	    out.close();
-	}
+	// DAOクラスをインスタンス化する。
+	ImoshochuCatalogDAO imoshochuCatalogDAO = new ImoshochuCatalogDAOImpl();
+	
+	// requestからHttpSessionを取り出し、ImoshochuCatalogItemのArrayListを
+	// "imoCatalog"として埋め込む。
+	request.getSession().setAttribute("imoCatalog", imoshochuCatalogDAO.getImoshochuCatalogList());
+	
+	// ImoshochuShop.jspに遷移する。
+	RequestDispatcher rd = request.getRequestDispatcher("/ImoshochuShop.jsp");
+	rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
