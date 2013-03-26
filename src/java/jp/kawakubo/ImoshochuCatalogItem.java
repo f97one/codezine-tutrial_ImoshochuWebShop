@@ -10,10 +10,10 @@ package jp.kawakubo;
  */
 public class ImoshochuCatalogItem {
     private String name = "";
-    private String nakeKana = "";
+    private String nameKana = "";
     private int dosu = 0;
     private String koji = "";
-    private String sweetpotatoName = "";
+    private String sweetPotatoName = "";
     private String manufacturer = "";
     private float volume = 0f;
     private int price = 0;
@@ -31,10 +31,10 @@ public class ImoshochuCatalogItem {
 	    float volume,
 	    int price) {
 	this.name = name;
-	this.nakeKana = nameKana;
+	this.nameKana = nameKana;
 	this.dosu = dosu;
 	this.koji = koji;
-	this.sweetpotatoName = sweetPotatoName;
+	this.sweetPotatoName = sweetPotatoName;
 	this.manufacturer = manufacturer;
 	this.volume = volume;
 	this.price = price;
@@ -44,8 +44,8 @@ public class ImoshochuCatalogItem {
 	return name;
     }
 
-    public String getNakeKana() {
-	return nakeKana;
+    public String getNameKana() {
+	return nameKana;
     }
 
     public int getDosu() {
@@ -56,8 +56,8 @@ public class ImoshochuCatalogItem {
 	return koji;
     }
 
-    public String getSweetpotatoName() {
-	return sweetpotatoName;
+    public String getSweetPotatoName() {
+	return sweetPotatoName;
     }
 
     public String getManufacturer() {
