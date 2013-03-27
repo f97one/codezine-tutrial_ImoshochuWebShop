@@ -71,5 +71,37 @@ public class ImoshochuCatalogItem {
     public int getPrice() {
 	return price;
     }
-    
+
+    public void setName(String name) {
+	this.name = name;
+    }
+
+    public void setNameKana(String nameKana) {
+	this.nameKana = nameKana;
+    }
+
+    public void setDosu(int dosu) {
+	this.dosu = dosu;
+    }
+
+    public void setKoji(String koji) {
+	this.koji = koji;
+    }
+
+    public void setSweetPotatoName(String sweetPotatoName) {
+	this.sweetPotatoName = sweetPotatoName;
+    }
+
+    public void setManufacturer(String manufacturer) {
+	this.manufacturer = manufacturer;
+    }
+
+    public void setVolume(float volume) {
+	this.volume = volume;
+    }
+
+    public void setPrice(int price) {
+	this.price = price;
+    }
+
 }
